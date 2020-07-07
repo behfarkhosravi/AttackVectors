@@ -18,7 +18,7 @@
     <xsl:text>{</xsl:text>
     
     <xsl:value-of select="$indent1"/>
-    <xsl:text>text: "</xsl:text>
+    <xsl:text>name: "</xsl:text>
     <!-- Need to replace " with \" in @TEXT strings -->
     <xsl:value-of disable-output-escaping='yes' select="@TEXT"/>
     <xsl:text>"</xsl:text>
@@ -34,7 +34,7 @@
     <xsl:if test="node">
       <xsl:text>,</xsl:text>
       <xsl:value-of select="$indent1"/>
-      <xsl:text>items: [</xsl:text>
+      <xsl:text>children: [</xsl:text>
       
       <!-- Recursion -->
       <xsl:apply-templates select="node">
