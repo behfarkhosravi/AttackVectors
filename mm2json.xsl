@@ -22,7 +22,7 @@
     <!-- Need to replace " with \" in @TEXT strings -->
     <xsl:value-of disable-output-escaping='yes' select="@TEXT"/>
     <xsl:text>"</xsl:text>
-    
+	 
     <xsl:if test="@LINK">
       <xsl:text>,</xsl:text>
       <xsl:value-of select="$indent1"/>

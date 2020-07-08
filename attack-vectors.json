@@ -209,6 +209,7 @@
     }]
 }, {
     name: "Blockchain",
+    url: "https://blockchain.hs-mittweida.de/",
     children: [{
         name: "Smart Contracts",
         children: [{

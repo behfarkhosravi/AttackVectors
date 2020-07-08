@@ -1,401 +1,67 @@
 (function ($) {
 
+  // -- procedure
 
-  var treeData =
-  {
-    "name": "Attack-Vectors",
-    "children": [
-      {
-        name: "OSI Modell",
-        children: [{
-            name: "Application Layer",
-            children: [{
-                name: "Malicious Program Infection"
-            }, {
-                name: "Phissing Attack"
-            }, {
-                name: "Smart Contract Vulnerabilities"
-            }, {
-                name: "Session Hijacking"
-            }]
-        }, {
-            name: "Network Layer",
-            children: [{
-                name: "Attack Aimed at the Cluster Tree"
-            }, {
-                name: "Flooding"
-            }, {
-                name: "Void Address Attack"
-            }, {
-                name: "Node Consensus Attack"
-            }, {
-                name: "Exchange DDoS"
-            }, {
-                name: "MITM Attack"
-            }, {
-                name: "Eclipse Attack"
-            }, {
-                name: "BGP Hijacking"
-            }]
-        }, {
-            name: "Data Link Layer",
-            children: [{
-                name: "Link Layer Jamming (Intended to create DoS)",
-                children: [{
-                    name: "Random Jamming"
-                }, {
-                    name: "Intelligent Jamming"
-                }]
-            }, {
-                name: "Exhaustion",
-                children: [{
-                    name: "Node specific flooding"
-                }]
-            }, {
-                name: "Collison",
-                children: [{
-                    name: "Back up Manipulation",
-                    children: [{
-                        name: "Battery Life Extension(BLE) Pretense"
-                    }, {
-                        name: "Constant Back-Off Exponent"
-                    }, {
-                        name: "Random Number Generator"
-                    }, {
-                        name: "Backoff Countdown Ommission"
-                    }]
-                }]
-            }, {
-                name: "Clear Channel Assesment(CCA) Manipulation",
-                children: [{
-                    name: "CCA Reduction"
-                }, {
-                    name: "CCA Ommission"
-                }]
-            }, {
-                name: "Same-Nonce Attack"
-            }, {
-                name: "Replay-Protection Attack"
-            }, {
-                name: "Acknowledgement(ACK Attacks)"
-            }, {
-                name: "Man in the Middle Attack"
-            }, {
-                name: "Guaranteed Time Slot(GTS) Attacks"
-            }, {
-                name: "Host Security"
-            }, {
-                name: "Quantum Attack"
-            }, {
-                name: "Length Expansion attack"
-            }, {
-                name: "Backdoor Attack"
-            }, {
-                name: "Brute Force Attack"
-            }]
-        }, {
-            name: "Physical Layer",
-            children: [{
-                name: "Jamming",
-                children: [{
-                    name: "Radio Jamming",
-                    children: [{
-                        name: "Wide-Band Denial"
-                    }, {
-                        name: "Pulse-Band Denial",
-                        children: [{
-                            name: "Constant"
-                        }, {
-                            name: "Deceptive"
-                        }, {
-                            name: "Random"
-                        }, {
-                            name: "Reactive",
-                            children: [{
-                                name: "Interrupt"
-                            }, {
-                                name: "Activity"
-                            }, {
-                                name: "Scan"
-                            }, {
-                                name: "Node-Specific Denial"
-                            }, {
-                                name: "Message-Specific Denial"
-                            }]
-                        }]
-                    }, {
-                        name: "PHY Payload COrruption"
-                    }, {
-                        name: "FCS Corruption"
-                    }]
-                }]
-            }, {
-                name: "Tampering",
-                children: [{
-                    name: "Message Manipulation",
-                    children: [{
-                        name: "Symbol Flipping"
-                    }, {
-                        name: "Signal Overshadowing"
-                    }]
-                }]
-            }, {
-                name: "Steganography Attacks"
-            }, {
-                name: "Unauthorized access to exchange Server"
-            }]
-        }]
-    }, {
-        name: "Network",
-        children: [{
-            name: "PKI"
-        }, {
-            name: "Protocols",
-            children: [{
-                name: "Bluetooth",
-                children: [{
-                    name: "Bluejacking"
-                }, {
-                    name: "Bluesnarf++"
-                }, {
-                    name: "Blue bump"
-                }, {
-                    name: "Bluesmack"
-                }]
-            }, {
-                name: "Zigbee",
-                children: [{
-                    name: "Jamming(Wireless equivalent of DoS attack)"
-                }, {
-                    name: "Collison Attack"
-                }, {
-                    name: "Void Address Attack"
-                }, {
-                    name: "Route disruption in the cluster tree"
-                }, {
-                    name: "Attack through compromised cooidinator"
-                }]
-            }]
-        }]
-    }, {
-        name: "physical Security",
-        children: [{
-            name: "Cloud & Outsourcing",
-            children: [{
-                name: "Access by service provider"
-            }]
-        }, {
-            name: "On Premise",
-            children: [{
-                name: "Access by employees"
-            }, {
-                name: "Access by guests"
-            }]
-        }]
-    }, {
-        name: "Hardware",
-        children: [{
-            name: "NFC(Near Field Communication)",
-            children: [{
-                name: "Eavesdropping attack"
-            }, {
-                name: "Data Corruption Attack(A basic Dos Attack)"
-            }, {
-                name: "Data Insertion Attack"
-            }]
-        }, {
-            name: "Host Computers",
-            children: [{
-                name: "Access as user"
-            }]
-        }]
-    }, {
-        name: "Users & Roles",
-        children: [{
-            name: "Phishing Emails"
-        }]
-    }, {
-        name: "Blockchain",
-        children: [{
-            name: "Smart Contracts",
-            children: [{
-                name: "Ethereum / EVM",
-                children: [{
-                    name: "Over/Underflows"
-                }, {
-                    name: "Reentrancy"
-                }, {
-                    name: "Timestamp based Attacks"
-                }, {
-                    name: "Frontrunning"
-                }, {
-                    name: "Short address attacks"
-                }, {
-                    name: "Role Based Access Control Privilege Escalation"
-                }]
-            }, {
-                name: "Smart contract DoS"
-            }, {
-                name: "Code Injection"
-            }]
-        }, {
-            name: "Theft of Private Keys / Wallet theft",
-            children: [{
-                name: "Social Engineering",
-                children: [{
-                    name: "Phishing"
-                }, {
-                    name: "USB Drop"
-                }, {
-                    name: "Dumpster Diving"
-                }]
-            }, {
-                name: "Brute Force"
-            }]
-        }, {
-            name: "Cryptography",
-            children: [{
-                name: "Brute Force"
-            }, {
-                name: "Quantum Computing"
-            }]
-        }, {
-            name: "Peer to peer system",
-            children: [{
-                name: "DNS Hijacking"
-            }, {
-                name: "BGP Hijacking"
-            }, {
-                name: "DoS Attacks"
-            }, {
-                name: "Front Running"
-            }, {
-                name: "Consensus Delay"
-            }, {
-                name: "Blacklisting"
-            }, {
-                name: "Eclipse Attacks",
-                children: [{
-                    name: "Timejacking attacks"
-                }]
-            }]
-        }, {
-            name: "Blockchain application",
-            children: [{
-                name: "Blockchain Ingestion"
-            }, {
-                name: "Crytojacking",
-                children: [{
-                    name: "Mining Malware"
-                }]
-            }, {
-                name: "Transaction Malleability"
-            }]
-        }, {
-            name: "Consensus Algorithm",
-            children: [{
-                name: "Majority Attacks",
-                children: [{
-                    name: "PoS Based",
-                    children: [{
-                        name: "Fake Stake Attack"
-                    }, {
-                        name: "Stake amplification attack"
-                    }, {
-                        name: "Accumulation Attack"
-                    }]
-                }, {
-                    name: "Bribery Attack"
-                }, {
-                    name: "Sybil Attack"
-                }, {
-                    name: "PoW Based",
-                    children: [{
-                        name: "51% Attack"
-                    }]
-                }]
-            }, {
-                name: "Selfish mining",
-                children: [{
-                    name: "Block Withholding"
-                }, {
-                    name: "Empty Blocks"
-                }]
-            }, {
-                name: "Double Spent Attack",
-                children: [{
-                    name: "Finney attacks"
-                }]
-            }, {
-                name: "Long range attack / Precomputing Attack"
-            }, {
-                name: "PoS Based",
-                children: [{
-                    name: "Nothing at Stake"
-                }, {
-                    name: "Sour-Milk Attack"
-                }]
-            }, {
-                name: "BFT Based"
-            }]
-        }, {
-            name: "General",
-            children: [{
-                name: "Role Based Access Control Privilege Escalation"
-            }, {
-                name: "Broken Object Level Authorization"
-            }, {
-                name: "Hypervisor",
-                children: [{
-                    name: "Tampering Attack"
-                }, {
-                    name: "Virtual Disk Exploit"
-                }]
-            }]
-        }]
-    }
-    ]
-  };
+  var body = document.body,
+    html = document.documentElement;
+
+  var h = Math.max(body.scrollHeight, body.offsetHeight,
+    html.clientHeight, html.scrollHeight, html.offsetHeight) - 100;
 
   // Set the dimensions and margins of the diagram
   var margin = { top: 20, right: 90, bottom: 30, left: 90 },
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-  // append the svg object to the body of the page
-  // appends a 'group' element to 'svg'
-  // moves the 'group' element to the top left margin
-  var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.right + margin.left)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate("
-      + margin.left + "," + margin.top + ")");
+    width = body.innerWidth - margin.left - margin.right,
+    height = h - margin.top - margin.bottom;
 
   var i = 0,
     duration = 750,
-    root;
+    trunc = 24;
 
-  // declares a tree layout and assigns the size
-  var treemap = d3.tree().size([height, width]);
+  var root, treemap, svg, tooltip;
 
-  // Assigns parent, children, height, depth
-  root = d3.hierarchy(treeData, function (d) { return d.children; });
-  root.x0 = height / 2;
-  root.y0 = 0;
+  buildTree("#treemap");
 
-  // Collapse after the second level
-  root.children.forEach(collapse);
+  // -- functions
 
-  update(root);
+  function buildTree(selector) {
 
-  // Collapse the node and all it's children
+    tooltip = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+
+    // appends a 'group' element to 'svg'
+    // moves the 'group' element to the top left margin
+    svg = d3.select(selector).append("svg")
+      .attr("width", width + margin.right + margin.left)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate("
+        + margin.left + "," + margin.top + ")");
+
+    treemap = d3.tree().size([height, width]);
+
+    // Assigns parent, children, height, depth
+    root = d3.hierarchy(getTree("Attacks"), function (d) { return d.children; });
+    root.x0 = height / 2;
+    root.y0 = 0;
+
+    // Collapse after the second level
+    root.children.forEach(collapse);
+
+    update(root);
+  }
+
   function collapse(d) {
     if (d.children) {
       d._children = d.children
       d._children.forEach(collapse)
       d.children = null
     }
+  }
+
+  function truncate(str, len) {
+    if (str.length > len) return str.substring(0, len) + "...";
+    else return str;
   }
 
   function update(source) {
@@ -417,7 +83,7 @@
       .data(nodes, function (d) { return d.id || (d.id = ++i); });
 
     // Enter any new modes at the parent's previous position.
-    var nodeEnter = node.enter().append('g')
+    var g = node.enter().append('g')
       .attr('class', 'node')
       .attr("transform", function (d) {
         return "translate(" + source.y0 + "," + source.x0 + ")";
@@ -425,7 +91,7 @@
       .on('click', click);
 
     // Add Circle for the nodes
-    nodeEnter.append('circle')
+    g.append('circle')
       .attr('class', 'node')
       .attr('r', 1e-6)
       .style("fill", function (d) {
@@ -433,18 +99,42 @@
       });
 
     // Add labels for the nodes
-    nodeEnter.append('text')
+    var text = g.append('text')
       .attr("dy", ".35em")
       .attr("x", function (d) {
         return d.children || d._children ? -13 : 13;
       })
       .attr("text-anchor", function (d) {
         return d.children || d._children ? "end" : "start";
+      });
+
+    text.append('a')
+      .attr("xlink:href", function (d) { console.log(d); return d.data.url; })
+      .attr("target", "_blank")
+      .attr("class", function (d) {
+        return (d.data.url !== undefined ? "tooltip hyperlink" : "no-hyperlink");
       })
-      .text(function (d) { return d.data.name; });
+      .text(function (d) { return truncate(d.data.name, trunc); })
+      .on("click", function () { d3.event.stopPropagation(); })
+
+    text.on("mouseover", function (d) {
+      if (d.data.name.length <= trunc) return;
+      tooltip.transition()
+        .duration(200)
+        .style("opacity", .9);
+        tooltip.html( d.data.name )
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY - 28) + "px");
+    })
+    text.on("mouseout", function (d) {
+      if (d.data.name.length <= trunc) return;
+      tooltip.transition()
+        .duration(500)
+        .style("opacity", 0);
+    });
 
     // UPDATE
-    var nodeUpdate = nodeEnter.merge(node);
+    var nodeUpdate = g.merge(node);
 
     // Transition to the proper position for the node
     nodeUpdate.transition()
@@ -537,6 +227,365 @@
       }
       update(d);
     }
+  }
+
+  function getTree(rootName) {
+
+    return {
+      name: rootName,
+      children: [
+        {
+          name: "OSI Modell",
+          children: [{
+            name: "Application Layer",
+            children: [{
+              name: "Malicious Program Infection"
+            }, {
+              name: "Phissing Attack"
+            }, {
+              name: "Smart Contract Vulnerabilities"
+            }, {
+              name: "Session Hijacking"
+            }]
+          }, {
+            name: "Network Layer",
+            children: [{
+              name: "Attack Aimed at the Cluster Tree"
+            }, {
+              name: "Flooding"
+            }, {
+              name: "Void Address Attack"
+            }, {
+              name: "Node Consensus Attack"
+            }, {
+              name: "Exchange DDoS"
+            }, {
+              name: "MITM Attack"
+            }, {
+              name: "Eclipse Attack"
+            }, {
+              name: "BGP Hijacking"
+            }]
+          }, {
+            name: "Data Link Layer",
+            children: [{
+              name: "Link Layer Jamming (Intended to create DoS)",
+              children: [{
+                name: "Random Jamming"
+              }, {
+                name: "Intelligent Jamming"
+              }]
+            }, {
+              name: "Exhaustion",
+              children: [{
+                name: "Node specific flooding"
+              }]
+            }, {
+              name: "Collison",
+              children: [{
+                name: "Back up Manipulation",
+                children: [{
+                  name: "Battery Life Extension(BLE) Pretense"
+                }, {
+                  name: "Constant Back-Off Exponent"
+                }, {
+                  name: "Random Number Generator"
+                }, {
+                  name: "Backoff Countdown Ommission"
+                }]
+              }]
+            }, {
+              name: "Clear Channel Assesment(CCA) Manipulation",
+              children: [{
+                name: "CCA Reduction"
+              }, {
+                name: "CCA Ommission"
+              }]
+            }, {
+              name: "Same-Nonce Attack"
+            }, {
+              name: "Replay-Protection Attack"
+            }, {
+              name: "Acknowledgement(ACK Attacks)"
+            }, {
+              name: "Man in the Middle Attack"
+            }, {
+              name: "Guaranteed Time Slot(GTS) Attacks"
+            }, {
+              name: "Host Security"
+            }, {
+              name: "Quantum Attack"
+            }, {
+              name: "Length Expansion attack"
+            }, {
+              name: "Backdoor Attack"
+            }, {
+              name: "Brute Force Attack"
+            }]
+          }, {
+            name: "Physical Layer",
+            children: [{
+              name: "Jamming",
+              children: [{
+                name: "Radio Jamming",
+                children: [{
+                  name: "Wide-Band Denial"
+                }, {
+                  name: "Pulse-Band Denial",
+                  children: [{
+                    name: "Constant"
+                  }, {
+                    name: "Deceptive"
+                  }, {
+                    name: "Random"
+                  }, {
+                    name: "Reactive",
+                    children: [{
+                      name: "Interrupt"
+                    }, {
+                      name: "Activity"
+                    }, {
+                      name: "Scan"
+                    }, {
+                      name: "Node-Specific Denial"
+                    }, {
+                      name: "Message-Specific Denial"
+                    }]
+                  }]
+                }, {
+                  name: "PHY Payload COrruption"
+                }, {
+                  name: "FCS Corruption"
+                }]
+              }]
+            }, {
+              name: "Tampering",
+              children: [{
+                name: "Message Manipulation",
+                children: [{
+                  name: "Symbol Flipping"
+                }, {
+                  name: "Signal Overshadowing"
+                }]
+              }]
+            }, {
+              name: "Steganography Attacks"
+            }, {
+              name: "Unauthorized access to exchange Server"
+            }]
+          }]
+        }, {
+          name: "Network",
+          children: [{
+            name: "PKI"
+          }, {
+            name: "Protocols",
+            children: [{
+              name: "Bluetooth",
+              children: [{
+                name: "Bluejacking"
+              }, {
+                name: "Bluesnarf++"
+              }, {
+                name: "Blue bump"
+              }, {
+                name: "Bluesmack"
+              }]
+            }, {
+              name: "Zigbee",
+              children: [{
+                name: "Jamming(Wireless equivalent of DoS attack)"
+              }, {
+                name: "Collison Attack"
+              }, {
+                name: "Void Address Attack"
+              }, {
+                name: "Route disruption in the cluster tree"
+              }, {
+                name: "Attack through compromised cooidinator"
+              }]
+            }]
+          }]
+        }, {
+          name: "physical Security",
+          children: [{
+            name: "Cloud & Outsourcing",
+            children: [{
+              name: "Access by service provider"
+            }]
+          }, {
+            name: "On Premise",
+            children: [{
+              name: "Access by employees"
+            }, {
+              name: "Access by guests"
+            }]
+          }]
+        }, {
+          name: "Hardware",
+          children: [{
+            name: "NFC(Near Field Communication)",
+            children: [{
+              name: "Eavesdropping attack"
+            }, {
+              name: "Data Corruption Attack(A basic Dos Attack)"
+            }, {
+              name: "Data Insertion Attack"
+            }]
+          }, {
+            name: "Host Computers",
+            children: [{
+              name: "Access as user"
+            }]
+          }]
+        }, {
+          name: "Users & Roles",
+          children: [{
+            name: "Phishing Emails"
+          }]
+        }, {
+          name: "Blockchain",
+          url: "https://blockchain.hs-mittweida.de/",
+          children: [{
+            name: "Smart Contracts",
+            children: [{
+              name: "Ethereum / EVM",
+              children: [{
+                name: "Over/Underflows"
+              }, {
+                name: "Reentrancy"
+              }, {
+                name: "Timestamp based Attacks"
+              }, {
+                name: "Frontrunning"
+              }, {
+                name: "Short address attacks"
+              }, {
+                name: "Role Based Access Control Privilege Escalation"
+              }]
+            }, {
+              name: "Smart contract DoS"
+            }, {
+              name: "Code Injection"
+            }]
+          }, {
+            name: "Theft of Private Keys / Wallet theft",
+            children: [{
+              name: "Social Engineering",
+              children: [{
+                name: "Phishing"
+              }, {
+                name: "USB Drop"
+              }, {
+                name: "Dumpster Diving"
+              }]
+            }, {
+              name: "Brute Force"
+            }]
+          }, {
+            name: "Cryptography",
+            children: [{
+              name: "Brute Force"
+            }, {
+              name: "Quantum Computing"
+            }]
+          }, {
+            name: "Peer to peer system",
+            children: [{
+              name: "DNS Hijacking"
+            }, {
+              name: "BGP Hijacking"
+            }, {
+              name: "DoS Attacks"
+            }, {
+              name: "Front Running"
+            }, {
+              name: "Consensus Delay"
+            }, {
+              name: "Blacklisting"
+            }, {
+              name: "Eclipse Attacks",
+              children: [{
+                name: "Timejacking attacks"
+              }]
+            }]
+          }, {
+            name: "Blockchain application",
+            children: [{
+              name: "Blockchain Ingestion"
+            }, {
+              name: "Crytojacking",
+              children: [{
+                name: "Mining Malware"
+              }]
+            }, {
+              name: "Transaction Malleability"
+            }]
+          }, {
+            name: "Consensus Algorithm",
+            children: [{
+              name: "Majority Attacks",
+              children: [{
+                name: "PoS Based",
+                children: [{
+                  name: "Fake Stake Attack"
+                }, {
+                  name: "Stake amplification attack"
+                }, {
+                  name: "Accumulation Attack"
+                }]
+              }, {
+                name: "Bribery Attack"
+              }, {
+                name: "Sybil Attack"
+              }, {
+                name: "PoW Based",
+                children: [{
+                  name: "51% Attack"
+                }]
+              }]
+            }, {
+              name: "Selfish mining",
+              children: [{
+                name: "Block Withholding"
+              }, {
+                name: "Empty Blocks"
+              }]
+            }, {
+              name: "Double Spent Attack",
+              children: [{
+                name: "Finney attacks"
+              }]
+            }, {
+              name: "Long range attack / Precomputing Attack"
+            }, {
+              name: "PoS Based",
+              children: [{
+                name: "Nothing at Stake"
+              }, {
+                name: "Sour-Milk Attack"
+              }]
+            }, {
+              name: "BFT Based"
+            }]
+          }, {
+            name: "General",
+            children: [{
+              name: "Role Based Access Control Privilege Escalation"
+            }, {
+              name: "Broken Object Level Authorization"
+            }, {
+              name: "Hypervisor",
+              children: [{
+                name: "Tampering Attack"
+              }, {
+                name: "Virtual Disk Exploit"
+              }]
+            }]
+          }]
+        }
+      ]
+    };
   }
 
 })(jQuery); // end of jQuery name space
