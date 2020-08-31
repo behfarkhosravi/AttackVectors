@@ -209,7 +209,6 @@
     }]
 }, {
     name: "Blockchain",
-    url: "https://blockchain.hs-mittweida.de/",
     children: [{
         name: "Smart Contracts",
         children: [{
@@ -226,6 +225,8 @@
                 name: "Short address attacks"
             }, {
                 name: "Role Based Access Control Privilege Escalation"
+            }, {
+                name: "Forced Balance"
             }]
         }, {
             name: "Smart contract DoS"
@@ -245,6 +246,8 @@
             }]
         }, {
             name: "Brute Force"
+        }, {
+            name: "Supposed Trustworthy Persons"
         }]
     }, {
         name: "Cryptography",
@@ -307,6 +310,8 @@
                 children: [{
                     name: "51% Attack"
                 }]
+            }, {
+                name: "Miner Collusion"
             }]
         }, {
             name: "Selfish mining",
@@ -316,9 +321,13 @@
                 name: "Empty Blocks"
             }]
         }, {
+            name: "Timestamp based Attacks"
+        }, {
             name: "Double Spent Attack",
             children: [{
                 name: "Finney attacks"
+            }, {
+                name: "Vector76 Attack"
             }]
         }, {
             name: "Long range attack / Precomputing Attack"
@@ -328,6 +337,8 @@
                 name: "Nothing at Stake"
             }, {
                 name: "Sour-Milk Attack"
+            }, {
+                name: "Stake Grinding"
             }]
         }, {
             name: "BFT Based"

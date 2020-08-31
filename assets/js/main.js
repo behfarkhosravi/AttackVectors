@@ -235,355 +235,366 @@
       name: rootName,
       children: [
         {
-          name: "OSI Modell",
-          children: [{
-            name: "Application Layer",
-            children: [{
-              name: "Malicious Program Infection"
-            }, {
-              name: "Phissing Attack"
-            }, {
-              name: "Smart Contract Vulnerabilities"
-            }, {
-              name: "Session Hijacking"
-            }]
-          }, {
-            name: "Network Layer",
-            children: [{
-              name: "Attack Aimed at the Cluster Tree"
-            }, {
-              name: "Flooding"
-            }, {
-              name: "Void Address Attack"
-            }, {
-              name: "Node Consensus Attack"
-            }, {
-              name: "Exchange DDoS"
-            }, {
-              name: "MITM Attack"
-            }, {
-              name: "Eclipse Attack"
-            }, {
-              name: "BGP Hijacking"
-            }]
-          }, {
-            name: "Data Link Layer",
-            children: [{
-              name: "Link Layer Jamming (Intended to create DoS)",
-              children: [{
-                name: "Random Jamming"
-              }, {
-                name: "Intelligent Jamming"
-              }]
-            }, {
-              name: "Exhaustion",
-              children: [{
-                name: "Node specific flooding"
-              }]
-            }, {
-              name: "Collison",
-              children: [{
-                name: "Back up Manipulation",
-                children: [{
-                  name: "Battery Life Extension(BLE) Pretense"
-                }, {
-                  name: "Constant Back-Off Exponent"
-                }, {
-                  name: "Random Number Generator"
-                }, {
-                  name: "Backoff Countdown Ommission"
-                }]
-              }]
-            }, {
-              name: "Clear Channel Assesment(CCA) Manipulation",
-              children: [{
-                name: "CCA Reduction"
-              }, {
-                name: "CCA Ommission"
-              }]
-            }, {
-              name: "Same-Nonce Attack"
-            }, {
-              name: "Replay-Protection Attack"
-            }, {
-              name: "Acknowledgement(ACK Attacks)"
-            }, {
-              name: "Man in the Middle Attack"
-            }, {
-              name: "Guaranteed Time Slot(GTS) Attacks"
-            }, {
-              name: "Host Security"
-            }, {
-              name: "Quantum Attack"
-            }, {
-              name: "Length Expansion attack"
-            }, {
-              name: "Backdoor Attack"
-            }, {
-              name: "Brute Force Attack"
-            }]
-          }, {
-            name: "Physical Layer",
-            children: [{
-              name: "Jamming",
-              children: [{
-                name: "Radio Jamming",
-                children: [{
-                  name: "Wide-Band Denial"
-                }, {
-                  name: "Pulse-Band Denial",
-                  children: [{
-                    name: "Constant"
-                  }, {
-                    name: "Deceptive"
-                  }, {
-                    name: "Random"
-                  }, {
-                    name: "Reactive",
-                    children: [{
-                      name: "Interrupt"
-                    }, {
-                      name: "Activity"
-                    }, {
-                      name: "Scan"
-                    }, {
-                      name: "Node-Specific Denial"
-                    }, {
-                      name: "Message-Specific Denial"
-                    }]
-                  }]
-                }, {
-                  name: "PHY Payload COrruption"
-                }, {
-                  name: "FCS Corruption"
-                }]
-              }]
-            }, {
-              name: "Tampering",
-              children: [{
-                name: "Message Manipulation",
-                children: [{
-                  name: "Symbol Flipping"
-                }, {
-                  name: "Signal Overshadowing"
-                }]
-              }]
-            }, {
-              name: "Steganography Attacks"
-            }, {
-              name: "Unauthorized access to exchange Server"
-            }]
-          }]
-        }, {
-          name: "Network",
-          children: [{
-            name: "PKI"
-          }, {
-            name: "Protocols",
-            children: [{
-              name: "Bluetooth",
-              children: [{
-                name: "Bluejacking"
-              }, {
-                name: "Bluesnarf++"
-              }, {
-                name: "Blue bump"
-              }, {
-                name: "Bluesmack"
-              }]
-            }, {
-              name: "Zigbee",
-              children: [{
-                name: "Jamming(Wireless equivalent of DoS attack)"
-              }, {
-                name: "Collison Attack"
-              }, {
-                name: "Void Address Attack"
-              }, {
-                name: "Route disruption in the cluster tree"
-              }, {
-                name: "Attack through compromised cooidinator"
-              }]
-            }]
-          }]
-        }, {
-          name: "physical Security",
-          children: [{
-            name: "Cloud & Outsourcing",
-            children: [{
-              name: "Access by service provider"
-            }]
-          }, {
-            name: "On Premise",
-            children: [{
-              name: "Access by employees"
-            }, {
-              name: "Access by guests"
-            }]
-          }]
-        }, {
-          name: "Hardware",
-          children: [{
-            name: "NFC(Near Field Communication)",
-            children: [{
-              name: "Eavesdropping attack"
-            }, {
-              name: "Data Corruption Attack(A basic Dos Attack)"
-            }, {
-              name: "Data Insertion Attack"
-            }]
-          }, {
-            name: "Host Computers",
-            children: [{
-              name: "Access as user"
-            }]
-          }]
-        }, {
-          name: "Users & Roles",
-          children: [{
-            name: "Phishing Emails"
-          }]
-        }, {
-          name: "Blockchain",
-          url: "https://blockchain.hs-mittweida.de/",
-          children: [{
-            name: "Smart Contracts",
-            children: [{
-              name: "Ethereum / EVM",
-              children: [{
-                name: "Over/Underflows"
-              }, {
-                name: "Reentrancy"
-              }, {
-                name: "Timestamp based Attacks"
-              }, {
-                name: "Frontrunning"
-              }, {
-                name: "Short address attacks"
-              }, {
-                name: "Role Based Access Control Privilege Escalation"
-              }]
-            }, {
-              name: "Smart contract DoS"
-            }, {
-              name: "Code Injection"
-            }]
-          }, {
-            name: "Theft of Private Keys / Wallet theft",
-            children: [{
-              name: "Social Engineering",
-              children: [{
-                name: "Phishing"
-              }, {
-                name: "USB Drop"
-              }, {
-                name: "Dumpster Diving"
-              }]
-            }, {
-              name: "Brute Force"
-            }]
-          }, {
-            name: "Cryptography",
-            children: [{
-              name: "Brute Force"
-            }, {
-              name: "Quantum Computing"
-            }]
-          }, {
-            name: "Peer to peer system",
-            children: [{
-              name: "DNS Hijacking"
-            }, {
-              name: "BGP Hijacking"
-            }, {
-              name: "DoS Attacks"
-            }, {
-              name: "Front Running"
-            }, {
-              name: "Consensus Delay"
-            }, {
-              name: "Blacklisting"
-            }, {
-              name: "Eclipse Attacks",
-              children: [{
-                name: "Timejacking attacks"
-              }]
-            }]
-          }, {
-            name: "Blockchain application",
-            children: [{
-              name: "Blockchain Ingestion"
-            }, {
-              name: "Crytojacking",
-              children: [{
-                name: "Mining Malware"
-              }]
-            }, {
-              name: "Transaction Malleability"
-            }]
-          }, {
-            name: "Consensus Algorithm",
-            children: [{
-              name: "Majority Attacks",
-              children: [{
-                name: "PoS Based",
-                children: [{
-                  name: "Fake Stake Attack"
-                }, {
-                  name: "Stake amplification attack"
-                }, {
-                  name: "Accumulation Attack"
-                }]
-              }, {
-                name: "Bribery Attack"
-              }, {
-                name: "Sybil Attack"
-              }, {
-                name: "PoW Based",
-                children: [{
-                  name: "51% Attack"
-                }]
-              }]
-            }, {
-              name: "Selfish mining",
-              children: [{
-                name: "Block Withholding"
-              }, {
-                name: "Empty Blocks"
-              }]
-            }, {
-              name: "Double Spent Attack",
-              children: [{
-                name: "Finney attacks"
-              }]
-            }, {
-              name: "Long range attack / Precomputing Attack"
-            }, {
-              name: "PoS Based",
-              children: [{
-                name: "Nothing at Stake"
-              }, {
-                name: "Sour-Milk Attack"
-              }]
-            }, {
-              name: "BFT Based"
-            }]
-          }, {
-            name: "General",
-            children: [{
-              name: "Role Based Access Control Privilege Escalation"
-            }, {
-              name: "Broken Object Level Authorization"
-            }, {
-              name: "Hypervisor",
-              children: [{
-                name: "Tampering Attack"
-              }, {
-                name: "Virtual Disk Exploit"
-              }]
-            }]
-          }]
-        }
+			name: "OSI Modell",
+			children: [{
+					name: "Application Layer",
+					children: [{
+						name: "Malicious Program Infection"
+					}, {
+						name: "Phissing Attack"
+					}, {
+						name: "Smart Contract Vulnerabilities"
+					}, {
+						name: "Session Hijacking"
+					}]
+				}, {
+					name: "Network Layer",
+					children: [{
+						name: "Attack Aimed at the Cluster Tree"
+					}, {
+						name: "Flooding"
+					}, {
+						name: "Void Address Attack"
+					}, {
+						name: "Node Consensus Attack"
+					}, {
+						name: "Exchange DDoS"
+					}, {
+						name: "MITM Attack"
+					}, {
+						name: "Eclipse Attack"
+					}, {
+						name: "BGP Hijacking"
+					}]
+				}, {
+					name: "Data Link Layer",
+					children: [{
+						name: "Link Layer Jamming (Intended to create DoS)",
+						children: [{
+							name: "Random Jamming"
+						}, {
+							name: "Intelligent Jamming"
+						}]
+					}, {
+						name: "Exhaustion",
+						children: [{
+							name: "Node specific flooding"
+						}]
+					}, {
+						name: "Collison",
+						children: [{
+							name: "Back up Manipulation",
+							children: [{
+								name: "Battery Life Extension(BLE) Pretense"
+							}, {
+								name: "Constant Back-Off Exponent"
+							}, {
+								name: "Random Number Generator"
+							}, {
+								name: "Backoff Countdown Ommission"
+							}]
+						}]
+					}, {
+						name: "Clear Channel Assesment(CCA) Manipulation",
+						children: [{
+							name: "CCA Reduction"
+						}, {
+							name: "CCA Ommission"
+						}]
+					}, {
+						name: "Same-Nonce Attack"
+					}, {
+						name: "Replay-Protection Attack"
+					}, {
+						name: "Acknowledgement(ACK Attacks)"
+					}, {
+						name: "Man in the Middle Attack"
+					}, {
+						name: "Guaranteed Time Slot(GTS) Attacks"
+					}, {
+						name: "Host Security"
+					}, {
+						name: "Quantum Attack"
+					}, {
+						name: "Length Expansion attack"
+					}, {
+						name: "Backdoor Attack"
+					}, {
+						name: "Brute Force Attack"
+					}]
+				}, {
+					name: "Physical Layer",
+					children: [{
+						name: "Jamming",
+						children: [{
+							name: "Radio Jamming",
+							children: [{
+								name: "Wide-Band Denial"
+							}, {
+								name: "Pulse-Band Denial",
+								children: [{
+									name: "Constant"
+								}, {
+									name: "Deceptive"
+								}, {
+									name: "Random"
+								}, {
+									name: "Reactive",
+									children: [{
+										name: "Interrupt"
+									}, {
+										name: "Activity"
+									}, {
+										name: "Scan"
+									}, {
+										name: "Node-Specific Denial"
+									}, {
+										name: "Message-Specific Denial"
+									}]
+								}]
+							}, {
+								name: "PHY Payload COrruption"
+							}, {
+								name: "FCS Corruption"
+							}]
+						}]
+					}, {
+						name: "Tampering",
+						children: [{
+							name: "Message Manipulation",
+							children: [{
+								name: "Symbol Flipping"
+							}, {
+								name: "Signal Overshadowing"
+							}]
+						}]
+					}, {
+						name: "Steganography Attacks"
+					}, {
+						name: "Unauthorized access to exchange Server"
+					}]
+				}]
+			}, {
+				name: "Network",
+				children: [{
+					name: "PKI"
+				}, {
+					name: "Protocols",
+					children: [{
+						name: "Bluetooth",
+						children: [{
+							name: "Bluejacking"
+						}, {
+							name: "Bluesnarf++"
+						}, {
+							name: "Blue bump"
+						}, {
+							name: "Bluesmack"
+						}]
+					}, {
+						name: "Zigbee",
+						children: [{
+							name: "Jamming(Wireless equivalent of DoS attack)"
+						}, {
+							name: "Collison Attack"
+						}, {
+							name: "Void Address Attack"
+						}, {
+							name: "Route disruption in the cluster tree"
+						}, {
+							name: "Attack through compromised cooidinator"
+						}]
+					}]
+				}]
+			}, {
+				name: "physical Security",
+				children: [{
+					name: "Cloud & Outsourcing",
+					children: [{
+						name: "Access by service provider"
+					}]
+				}, {
+					name: "On Premise",
+					children: [{
+						name: "Access by employees"
+					}, {
+						name: "Access by guests"
+					}]
+				}]
+			}, {
+				name: "Hardware",
+				children: [{
+					name: "NFC(Near Field Communication)",
+					children: [{
+						name: "Eavesdropping attack"
+					}, {
+						name: "Data Corruption Attack(A basic Dos Attack)"
+					}, {
+						name: "Data Insertion Attack"
+					}]
+				}, {
+					name: "Host Computers",
+					children: [{
+						name: "Access as user"
+					}]
+				}]
+			}, {
+				name: "Users & Roles",
+				children: [{
+					name: "Phishing Emails"
+				}]
+			}, {
+				name: "Blockchain",
+				children: [{
+					name: "Smart Contracts",
+					children: [{
+						name: "Ethereum / EVM",
+						children: [{
+							name: "Over/Underflows"
+						}, {
+							name: "Reentrancy"
+						}, {
+							name: "Timestamp based Attacks"
+						}, {
+							name: "Frontrunning"
+						}, {
+							name: "Short address attacks"
+						}, {
+							name: "Role Based Access Control Privilege Escalation"
+						}, {
+							name: "Forced Balance"
+						}]
+					}, {
+						name: "Smart contract DoS"
+					}, {
+						name: "Code Injection"
+					}]
+				}, {
+					name: "Theft of Private Keys / Wallet theft",
+					children: [{
+						name: "Social Engineering",
+						children: [{
+							name: "Phishing"
+						}, {
+							name: "USB Drop"
+						}, {
+							name: "Dumpster Diving"
+						}]
+					}, {
+						name: "Brute Force"
+					}, {
+						name: "Supposed Trustworthy Persons"
+					}]
+				}, {
+					name: "Cryptography",
+					children: [{
+						name: "Brute Force"
+					}, {
+						name: "Quantum Computing"
+					}]
+				}, {
+					name: "Peer to peer system",
+					children: [{
+						name: "DNS Hijacking"
+					}, {
+						name: "BGP Hijacking"
+					}, {
+						name: "DoS Attacks"
+					}, {
+						name: "Front Running"
+					}, {
+						name: "Consensus Delay"
+					}, {
+						name: "Blacklisting"
+					}, {
+						name: "Eclipse Attacks",
+						children: [{
+							name: "Timejacking attacks"
+						}]
+					}]
+				}, {
+					name: "Blockchain application",
+					children: [{
+						name: "Blockchain Ingestion"
+					}, {
+						name: "Crytojacking",
+						children: [{
+							name: "Mining Malware"
+						}]
+					}, {
+						name: "Transaction Malleability"
+					}]
+				}, {
+					name: "Consensus Algorithm",
+					children: [{
+						name: "Majority Attacks",
+						children: [{
+							name: "PoS Based",
+							children: [{
+								name: "Fake Stake Attack"
+							}, {
+								name: "Stake amplification attack"
+							}, {
+								name: "Accumulation Attack"
+							}]
+						}, {
+							name: "Bribery Attack"
+						}, {
+							name: "Sybil Attack"
+						}, {
+							name: "PoW Based",
+							children: [{
+								name: "51% Attack"
+							}]
+						}, {
+							name: "Miner Collusion"
+						}]
+					}, {
+						name: "Selfish mining",
+						children: [{
+							name: "Block Withholding"
+						}, {
+							name: "Empty Blocks"
+						}]
+					}, {
+						name: "Timestamp based Attacks"
+					}, {
+						name: "Double Spent Attack",
+						children: [{
+							name: "Finney attacks"
+						}, {
+							name: "Vector76 Attack"
+						}]
+					}, {
+						name: "Long range attack / Precomputing Attack"
+					}, {
+						name: "PoS Based",
+						children: [{
+							name: "Nothing at Stake"
+						}, {
+							name: "Sour-Milk Attack"
+						}, {
+							name: "Stake Grinding"
+						}]
+					}, {
+						name: "BFT Based"
+					}]
+				}, {
+					name: "General",
+					children: [{
+						name: "Role Based Access Control Privilege Escalation"
+					}, {
+						name: "Broken Object Level Authorization"
+					}, {
+						name: "Hypervisor",
+						children: [{
+							name: "Tampering Attack"
+						}, {
+							name: "Virtual Disk Exploit"
+						}]
+					}]
+				}]
+			}
       ]
     };
   }
